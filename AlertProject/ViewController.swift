@@ -34,7 +34,9 @@ class ViewController: UIViewController {
         if message != "" {
             showAlert(message: message)
             return
-        }        
+        }
+        
+        performSegue(withIdentifier: "toSuccess", sender: nil)
     }
     
     private func showAlert(message: String) {
@@ -46,5 +48,15 @@ class ViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(type(of:segue.destination))
+        if segue.identifier != "toSuccess" {
+            return
+        }
+        
+        if let dest = segue.destination as? SuccessViewController {
+            dest.name = userName.text!
+        }
+    }
 }
 

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -69,7 +70,7 @@
                         <outlet property="password" destination="VwS-xO-V9n" id="7o2-IK-8e2"/>
                         <outlet property="passwordCheck" destination="NFA-EG-Lpf" id="g1W-2n-DnV"/>
                         <outlet property="userName" destination="nqQ-ar-jed" id="4mH-hV-trV"/>
-                        <segue destination="n1Q-OM-FeC" kind="show" identifier="toSuccessSignUp" id="SiB-aO-Yjz"/>
+                        <segue destination="7qM-Io-RkW" kind="show" identifier="toSuccess" id="MDx-43-mni"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,43 +78,36 @@
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
         <!--Success View Controller-->
-        <scene sceneID="mHH-y0-Pue">
+        <scene sceneID="OMY-35-q2T">
             <objects>
-                <viewController id="n1Q-OM-FeC" customClass="SuccessViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fue-4c-1xl">
+                <viewController id="7qM-Io-RkW" customClass="SuccessViewController" customModule="AlertProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pug-GD-mcs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up Success!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5X-43-T50">
-                                <rect key="frame" x="140.5" y="437.5" width="133.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, NewUser!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmI-NL-ZFa">
+                                <rect key="frame" x="72.5" y="429.5" width="269.5" height="38"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{Welcome, New User!}}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbC-ci-tUT">
-                                <rect key="frame" x="115" y="493.5" width="184" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemRedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Inp-7n-c4h"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="66f-Vm-KRn"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="Z5X-43-T50" firstAttribute="centerX" secondItem="Fue-4c-1xl" secondAttribute="centerX" id="j21-DM-PL0"/>
-                            <constraint firstItem="fbC-ci-tUT" firstAttribute="top" secondItem="Z5X-43-T50" secondAttribute="bottom" constant="35" id="wqk-w5-2Gf"/>
-                            <constraint firstItem="fbC-ci-tUT" firstAttribute="centerX" secondItem="Fue-4c-1xl" secondAttribute="centerX" id="yg8-h6-ayF"/>
-                            <constraint firstItem="Z5X-43-T50" firstAttribute="centerY" secondItem="Fue-4c-1xl" secondAttribute="centerY" id="yw6-GL-arC"/>
+                            <constraint firstItem="HmI-NL-ZFa" firstAttribute="centerX" secondItem="Pug-GD-mcs" secondAttribute="centerX" id="qWT-53-y82"/>
+                            <constraint firstItem="HmI-NL-ZFa" firstAttribute="top" secondItem="66f-Vm-KRn" secondAttribute="top" constant="341.5" id="rn5-XJ-vVP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4LW-iS-1IU"/>
+                    <navigationItem key="navigationItem" id="XHF-iF-Dex"/>
                     <connections>
-                        <outlet property="welcomeLabel" destination="fbC-ci-tUT" id="fDm-eA-kY8"/>
+                        <outlet property="welcomeLabel" destination="HmI-NL-ZFa" id="s37-WZ-XMG"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ucZ-IR-Vmr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ai6-d3-2AR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836.2318840579712" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1865" y="152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eAs-Qy-x74">
@@ -135,8 +129,14 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
